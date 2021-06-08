@@ -1,0 +1,21 @@
+{
+  "eslint.workingDirectories": ["./src"],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  },
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 80,
+  "prettier.semi": false,
+  "editor.formatOnSave": true
+}
