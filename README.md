@@ -8,9 +8,9 @@ A mock server for Algolia, primarily for testing purposes.
 
 | Verb | Path                                                | Method                                                                                          | Supported |
 | ---- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------- |
-| POST | /1/indexes/`{indexName}`/query                      | [Search index (POST)](https://www.algolia.com/doc/rest-api/search/#search-index-post)           | No        |
+| POST | /1/indexes/`{indexName}`/query                      | [Search index (POST)](https://www.algolia.com/doc/rest-api/search/#search-index-post)           | Yes       |
 | GET  | /1/indexes/`{indexName}`                            | [Search index (GET)](https://www.algolia.com/doc/rest-api/search/#search-index-get)             | No        |
-| POST | /1/indexes/\*/queries                               | [Search multiple indices](https://www.algolia.com/doc/rest-api/search/#search-multiple-indices) | No        |
+| POST | /1/indexes/\*/queries                               | [Search multiple indices](https://www.algolia.com/doc/rest-api/search/#search-multiple-indices) | Yes       |
 | POST | /1/indexes/`{indexName}`/facets/`{facetName}`/query | [Search for facet values](https://www.algolia.com/doc/rest-api/search/#search-for-facet-values) | No        |
 | POST | /1/indexes/`{indexName}`/browse                     | [Browser index (POST)](https://www.algolia.com/doc/rest-api/search/#browse-index-post)          | No        |
 | GET  | /1/indexes/`{indexName}`/browse                     | [Browser index (GET)](https://www.algolia.com/doc/rest-api/search/#browse-index-get)            | No        |
@@ -23,12 +23,12 @@ A mock server for Algolia, primarily for testing purposes.
 | PUT    | /1/indexes/`{indexName}`/`{objectID}`         | [Add/update object (with ID)](https://www.algolia.com/doc/rest-api/search/#addupdate-object-with-id)                              | No        |
 | DELETE | /1/indexes/`{indexName}`/`{objectID}`         | [Delete object](https://www.algolia.com/doc/rest-api/search/#delete-object)                                                       | No        |
 | POST   | /1/indexes/`{indexName}`/deleteByQuery        | [Delete by](https://www.algolia.com/doc/rest-api/search/#delete-by)                                                               | No        |
-| POST   | /1/indexes/`{indexName}`/clear                | [Clear objects](https://www.algolia.com/doc/rest-api/search/#clear-objects)                                                       | No        |
+| POST   | /1/indexes/`{indexName}`/clear                | [Clear objects](https://www.algolia.com/doc/rest-api/search/#clear-objects)                                                       | Yes       |
 | POST   | /1/indexes/`{indexName}`/`{objectID}`/partial | [Partially update object](https://www.algolia.com/doc/rest-api/search/#partially-update-object)                                   | No        |
-| POST   | /1/indexes/`{indexName}`/batch                | [Batch write operations](https://www.algolia.com/doc/rest-api/search/#batch-write-operations)                                     | No        |
-| POST   | /1/indexes/\*/batch                           | [Batch write operations (multiple indices)](https://www.algolia.com/doc/rest-api/search/#batch-write-operations-multiple-indices) | No        |
-| POST   | /1/indexes/\*/objects                         | [Get objects](https://www.algolia.com/doc/rest-api/search/#get-objects)                                                           | No        |
-| GET    | /1/indexes/`{indexName}`/`{objectID}`         | [Get object](https://www.algolia.com/doc/rest-api/search/#get-object)                                                             | No        |
+| POST   | /1/indexes/`{indexName}`/batch                | [Batch write operations](https://www.algolia.com/doc/rest-api/search/#batch-write-operations)                                     | Yes       |
+| POST   | /1/indexes/\*/batch                           | [Batch write operations (multiple indices)](https://www.algolia.com/doc/rest-api/search/#batch-write-operations-multiple-indices) | Yes       |
+| POST   | /1/indexes/\*/objects                         | [Get objects](https://www.algolia.com/doc/rest-api/search/#get-objects)                                                           | Yes       |
+| GET    | /1/indexes/`{indexName}`/`{objectID}`         | [Get object](https://www.algolia.com/doc/rest-api/search/#get-object)                                                             | Yes       |
 
 ### JavaScript API Client
 

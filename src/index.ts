@@ -5,6 +5,8 @@ import morgan from 'morgan'
 import rc from 'rc'
 
 import indexRouter from './routes/index'
+import searchRouter from './routes/search'
+import objectRouter from './routes/object'
 
 dotenv.config()
 const __TEST__ = process.env.NODE_ENV === `test`
@@ -20,6 +22,8 @@ app.use(cors())
 app.use(morgan(`dev`))
 
 app.use(`/`, indexRouter)
+app.use(`/1/indexes`, searchRouter)
+app.use(`/1/indexes`, objectRouter)
 
 if (!__TEST__) {
   app.listen(config.port, () => {
