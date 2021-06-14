@@ -1,0 +1,10 @@
+{
+  "port": 9200,
+  "indices": [
+    {
+      "name": "dummy_index",
+      "replicas": ["dummy_index_replica_1"]
+    }
+  ],
+  "searchableAttributes": []
+}

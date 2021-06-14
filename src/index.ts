@@ -8,18 +8,18 @@ import indexRouter from './routes/index'
 import searchRouter from './routes/search'
 import objectRouter from './routes/object'
 
+import Indexer from './lib/indexer'
+
 dotenv.config()
 const __TEST__ = process.env.NODE_ENV === `test`
 
-export const config = rc(`algocks`, {
-  port: process.env.port,
-})
+export const config = rc(`algocks`)
 
 const app = express()
 
-app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 app.use(morgan(`dev`))
+app.use(express.json({ type: `*/*` }))
 
 app.use(`/`, indexRouter)
 app.use(`/1/indexes`, searchRouter)
@@ -32,3 +32,4 @@ if (!__TEST__) {
 }
 
 export default app
+export const indexer = new Indexer()
